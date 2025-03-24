@@ -634,3 +634,43 @@
 //        }
 //    }
 //}
+
+//4 - Write a program that picks a random number between 1 and 10. Give the user 4 chances to guess the number. 
+//    If the user guesses the number, display “You won"; otherwise, display “You lost".
+//    (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Random random = new Random();
+//            int number = random.Next(1, 11); // 11 is exclusive, so it gives 1 to 10
+
+
+//            for(int i = 0; i < 4; i++)
+//            {
+//                Console.WriteLine("Enter the number between 1 to 10 to predict the number : ");
+//                var num = Convert.ToInt32(Console.ReadLine());
+
+//                if(num == number)
+//                {
+//                    Console.WriteLine($"Correct !! The number is {number}");
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Try Again");
+//                }
+//            }
+//            Console.WriteLine(number);
+
+
+//        }
+//    }
+//}
+
+//5 - Write a program and ask the user to enter a series of numbers separated by comma. 
+//    Find the maximum of the numbers and display it on the console.
+//    For example, if the user enters “5, 3, 8, 1, 4", the program should display 8.
