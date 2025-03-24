@@ -517,35 +517,120 @@
 //    If the number of demerit points is above 12, the program should display License Suspended.
 
 
-using System;
-namespace logicals
-{
-    class Program
-    {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Enter the speed limit : ");
-            var speedLimit = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the current speed : ");
-            var currentSpeed = Convert.ToInt32(Console.ReadLine());
-            
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the speed limit : ");
+//            var speedLimit = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the current speed : ");
+//            var currentSpeed = Convert.ToInt32(Console.ReadLine());
 
-            if(currentSpeed <= speedLimit)
-            {
-                Console.WriteLine("OK");
-            }
-            else
-            {
-                int demirits = currentSpeed - speedLimit;
-                if(demirits > 12)
-                {
-                    Console.WriteLine("Licence Canceled.");
-                }
-                else
-                {
-                    Console.WriteLine(demirits / 5);
-                }
-            }
-        }
-    }
-}
+
+//            if(currentSpeed <= speedLimit)
+//            {
+//                Console.WriteLine("OK");
+//            }
+//            else
+//            {
+//                int demirits = currentSpeed - speedLimit;
+//                if(demirits > 12)
+//                {
+//                    Console.WriteLine("Licence Canceled.");
+//                }
+//                else
+//                {
+//                    Console.WriteLine(demirits / 5);
+//                }
+//            }
+//        }
+//    }
+//}
+
+//1 - Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder.
+//    Display the count on the console.
+
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int count = 0;
+//            for(int i = 0; i <= 100; i++)
+//            {
+//                if (i % 3 == 0)
+//                {
+//                    count++;
+//                }
+
+//            }
+
+//            Console.WriteLine(count);
+//        }
+//    }
+//}
+
+//2 - Write a program and continuously ask the user to enter a number or "ok" to exit.
+//    Calculate the sum of all the previously entered numbers and display it on the console.
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            var list = new List<int>();
+//            while (true)
+//            {
+//                Console.WriteLine("Enter a number or ok to exit");
+//                var input = Console.ReadLine();
+//                input = input.ToLower();
+
+//                int n = 0;
+//                if (input == "ok")
+//                {
+
+//                    foreach(var i in list)
+//                    {
+//                        n += i;
+//                    }
+//                    Console.WriteLine($"Sum : {n}");
+//                    break;
+//                }
+//                else
+//                {
+//                    list.Add(Convert.ToInt32(input));
+//                }
+
+//            }
+//        }
+//    }
+//}
+
+
+
+//3 - Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. 
+//    For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the number to get the Factorial");
+//            int n = Convert.ToInt32(Console.ReadLine());
+//            int fact = 1;
+//            for(int i = n; i > 0; i--)
+//            {
+//                fact *= i;
+//            }
+//            Console.WriteLine(fact);
+//        }
+//    }
+//}
