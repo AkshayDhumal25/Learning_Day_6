@@ -395,4 +395,157 @@
 //    }
 //}
 
+//********************** Indexer ****************
 
+//namespace Indexers
+//{
+
+//    public class HttpCookie
+//    {
+//        private Dictionary<string, string> _dictionary = new Dictionary<string, string>;
+
+//        public HttpCookie()
+//        {
+//            _dictionary = new Dictionary<string, string>();
+//        }
+
+//        public string this[string key]
+//        {
+//            get
+//            {
+//                return _dictionary[key];
+//            }
+//            set { _dictionary[key] = value; }
+//        }
+//    }
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            var cookie = new HttpCookie();
+//            cookie["name"] = "Akshay";
+//            Console.WriteLine(cookie["name"]);
+
+//        }
+//    }
+//}
+
+//Input: arr[] = [10, 3, 5, 6, 20]
+//Output: 1200
+//Explanation: Multiplication of 10, 6 and 20
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int[] array = new int[] { 10, 3, 5, 6, 20 };
+//            int multiplication = 1;
+//            //int currentMultiplication = 1;
+
+//            for(int i = 0; i < array.Length; i++)
+//            {
+//                for(int j = i + 1; j < array.Length; j++)
+//                {
+//                    for(int k = j + 1; k < array.Length; k++)
+//                    {
+//                        if ((array[i]* array[j] * array[k]) > multiplication)
+//                        {
+//                            multiplication = (array[i] * array[j] * array[k]);
+//                        }
+//                    }
+//                }
+//            }
+
+//            Console.WriteLine(multiplication);
+//        }
+//    }
+//}
+
+
+//1 - Write a program and ask the user to enter a number.
+//    The number should be between 1 to 10. If the user enters a valid number, display "Valid" on the console. 
+//     Otherwise, display "Invalid". 
+//    (This logic is used a lot in applications where values entered into input boxes need to be validated.)
+//using System;
+//using System.Collections.Specialized;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the valid number between 1 to 10");
+//            var n = Convert.ToInt32(Console.ReadLine());
+//            if(n >0 && n <= 10)
+//            {
+//                Console.WriteLine("Valid");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Invalid");
+//            }
+//        }
+//    }
+//}
+
+//2- Write a program which takes two numbers from the console and displays the maximum of the two.
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            int x, y;
+//            Console.WriteLine("Enter the 1st Number : ");
+//            x = Convert.ToInt32(Console.ReadLine());
+//            Console.WriteLine("Enter the 2nd Number : ");
+//            y = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine(Math.Max(x, y));
+//        }
+//    }
+//}
+
+//4 - Your job is to write a program for a speed camera. For simplicity, ignore the details such as camera, 
+//    sensors, etc and focus purely on the logic. Write a program that asks the user to enter the speed limit. 
+//    nce set, the program asks for the speed of a car. If the user enters a value less than the speed limit, 
+//    program should display Ok on the console. If the value is above the speed limit,
+//    the program should calculate the number of demerit points. For every 5km/hr above the speed limit, 
+//    1 demerit points should be incurred and displayed on the console.
+//    If the number of demerit points is above 12, the program should display License Suspended.
+
+
+using System;
+namespace logicals
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the speed limit : ");
+            var speedLimit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the current speed : ");
+            var currentSpeed = Convert.ToInt32(Console.ReadLine());
+            
+
+            if(currentSpeed <= speedLimit)
+            {
+                Console.WriteLine("OK");
+            }
+            else
+            {
+                int demirits = currentSpeed - speedLimit;
+                if(demirits > 12)
+                {
+                    Console.WriteLine("Licence Canceled.");
+                }
+                else
+                {
+                    Console.WriteLine(demirits / 5);
+                }
+            }
+        }
+    }
+}
